@@ -4,3 +4,9 @@ __pycache__/
 
 # Virtual environment
 venv/
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+*.exe
