@@ -24,10 +24,10 @@ class FileService:
                     return False
             
             with open(filename, 'w', encoding='utf-8') as f:
-                f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
                 
                 for i, name in enumerate(names, 1):
-                    f.write(f"{i:2d}. {name}")
+                    f.write(f"{i:2d}. {name}\n")
 
             print(f"\nNames exported to '{filename}' successfully!")
             print(f"Total names exported: {len(names)}")
