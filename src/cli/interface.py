@@ -57,7 +57,7 @@ class SettlementCLI:
             
             try:
                 choice = self.menu_handler.get_user_choice(
-                    "   Select option (1-4): ", 
+                    "Select option (1-4): ", 
                     ['1', '2', '3', '4']
                 )
                 
