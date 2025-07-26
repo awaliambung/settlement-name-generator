@@ -26,7 +26,7 @@ GERMANIC_PREFIXES = [
     "Sal", "Mil", "Brent", "Craw", "Lang", "Thet", "Hert", "Rut", "Ay", "Bid"
 ]
 
-GERMANIC_MIDDLES = [
+GERMANIC_ROOTS = [
     "ing", "en", "an", "on", "un", "er", "ar", "or", "el", "al", "ol", "ul",
     "ling", "ning", "ring", "sing", "ting", "wing", "zing",
     "wald", "wold", "weald", "wild", "wick", "wich", "wyck",

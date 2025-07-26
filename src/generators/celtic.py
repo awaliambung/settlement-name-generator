@@ -1,6 +1,6 @@
 import random
 from .base_generator import BaseGenerator
-from data.celtic_elements import CELTIC_PREFIXES, CELTIC_MIDDLES, CELTIC_SUFFIXES
+from data.celtic_elements import CELTIC_PREFIXES, CELTIC_ROOTS, CELTIC_SUFFIXES
 
 class CelticGenerator(BaseGenerator):
     
@@ -16,7 +16,7 @@ class CelticGenerator(BaseGenerator):
     
     def load_elements(self) -> None:
         self.prefixes = CELTIC_PREFIXES
-        self.middles = CELTIC_MIDDLES
+        self.roots = CELTIC_ROOTS
         self.suffixes = CELTIC_SUFFIXES
     
     def generate_name(self) -> str:

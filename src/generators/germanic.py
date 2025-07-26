@@ -1,6 +1,6 @@
 import random
 from .base_generator import BaseGenerator
-from data.germanic_elements import GERMANIC_PREFIXES, GERMANIC_MIDDLES, GERMANIC_SUFFIXES
+from data.germanic_elements import GERMANIC_PREFIXES, GERMANIC_ROOTS, GERMANIC_SUFFIXES
 
 class GermanicGenerator(BaseGenerator):
     
@@ -17,7 +17,7 @@ class GermanicGenerator(BaseGenerator):
     
     def load_elements(self) -> None:
         self.prefixes = GERMANIC_PREFIXES
-        self.middles = GERMANIC_MIDDLES
+        self.roots = GERMANIC_ROOTS
         self.suffixes = GERMANIC_SUFFIXES
     
     def generate_name(self) -> str:

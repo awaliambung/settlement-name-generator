@@ -1,6 +1,6 @@
 import random
 from .base_generator import BaseGenerator
-from data.romance_elements import ROMANCE_PREFIXES, ROMANCE_MIDDLES, ROMANCE_SUFFIXES
+from data.romance_elements import ROMANCE_PREFIXES, ROMANCE_ROOTS, ROMANCE_SUFFIXES
 
 class RomanceGenerator(BaseGenerator):
     
@@ -16,7 +16,7 @@ class RomanceGenerator(BaseGenerator):
     
     def load_elements(self) -> None:
         self.prefixes = ROMANCE_PREFIXES
-        self.middles = ROMANCE_MIDDLES
+        self.roots = ROMANCE_ROOTS
         self.suffixes = ROMANCE_SUFFIXES
     
     def generate_name(self) -> str:

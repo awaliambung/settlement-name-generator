@@ -4,11 +4,11 @@ from abc import ABC, abstractmethod
 from typing import List
 
 class BaseGenerator(ABC):
-    __slots__ = ['prefixes', 'middles', 'suffixes', '_phonetic_rules', '_translation_table', '_translation_pattern']
+    __slots__ = ['prefixes', 'roots', 'suffixes', '_phonetic_rules', '_translation_table', '_translation_pattern']
     
     def __init__(self):
         self.prefixes = []
-        self.middles = []
+        self.roots = []
         self.suffixes = []
         self._phonetic_rules = {}
     
@@ -43,8 +43,8 @@ class BaseGenerator(ABC):
         prefix = random.choice(self.prefixes)
         suffix = random.choice(self.suffixes)
         
-        if random.random() < 0.5 and self.middles:
-            middle = random.choice(self.middles)
-            return self.combine_elements(prefix, middle, suffix)
+        if random.random() < 0.5 and self.roots:
+            root = random.choice(self.roots)
+            return self.combine_elements(prefix, root, suffix)
         else:
             return self.combine_elements(prefix, suffix)

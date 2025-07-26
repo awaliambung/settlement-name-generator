@@ -22,7 +22,7 @@ CELTIC_PREFIXES = [
     "Cill", "Domnach", "Eaglais", "Teampall", "Sliabh", "Beann", "Mullach"
 ]
 
-CELTIC_MIDDLES = [
+CELTIC_ROOTS = [
     "mor", "mer", "mir", "mur", "mar", "myr", "maer", "moer", "muir",
     "glas", "gles", "glis", "glos", "glus", "glar", "gler", "glir", "glor", "glur",
     "dun", "den", "din", "don", "dyn", "dar", "der", "dir", "dor", "dur",

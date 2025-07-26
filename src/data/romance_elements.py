@@ -19,7 +19,7 @@ ROMANCE_PREFIXES = [
     "Victor", "Martinus", "Stephanus", "Petrus", "Paulus", "Johannes", "Robertus"
 ]
 
-ROMANCE_MIDDLES = [
+ROMANCE_ROOTS = [
     "riv", "rip", "rup", "rob", "rib", "rav", "ray", "roy", "ruy",
     "val", "vel", "vil", "vol", "vul", "var", "ver", "vir", "vor", "vur",
     "mont", "ment", "mint", "mont", "munt", "mar", "mer", "mir", "mor", "mur",
