@@ -46,7 +46,10 @@ class SettlementCLI:
             status = "x" if enabled else " "
             print(f"{i}. [{status}] {name}")
         print()
-        print("4. Back to Main Menu")
+        randomised_status = "x" if self.settings.use_randomised_roots else " "
+        print(f"4. [{randomised_status}] Use Randomised Roots")
+        print()
+        print("5. Back to Main Menu")
         print()
     
     def handle_settings(self):
@@ -57,8 +60,8 @@ class SettlementCLI:
             
             try:
                 choice = self.menu_handler.get_user_choice(
-                    "Select option (1-4): ", 
-                    ['1', '2', '3', '4']
+                    "Select option (1-5): ", 
+                    ['1', '2', '3', '4', '5']
                 )
                 
                 if choice in ['1', '2', '3']:
@@ -66,6 +69,8 @@ class SettlementCLI:
                     selected_generator = generator_names[int(choice) - 1]
                     self.settings.enabled_generators[selected_generator] = not self.settings.enabled_generators[selected_generator]
                 elif choice == '4':
+                    self.settings.toggle_randomised_roots()
+                elif choice == '5':
                     break
             except KeyboardInterrupt:
                 break
@@ -86,7 +91,8 @@ class SettlementCLI:
             
             generated_names = self.name_service.generate_settlement_batch(
                 active_generators, 
-                self.settings.max_settlements
+                self.settings.max_settlements,
+                self.settings.use_randomised_roots
             )
             
             self._display_generated_names(generated_names)

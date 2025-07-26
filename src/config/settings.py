@@ -5,6 +5,7 @@ from typing import Dict, List
 class GeneratorSettings:
     enabled_generators: Dict[str, bool]
     max_settlements: int = 10
+    use_randomised_roots: bool = False
     
     def get_active_generators(self) -> List[str]:
         return [name for name, enabled in self.enabled_generators.items() if enabled]
@@ -14,6 +15,10 @@ class GeneratorSettings:
             self.enabled_generators[generator_name] = not self.enabled_generators[generator_name]
             return self.enabled_generators[generator_name]
         return False
+    
+    def toggle_randomised_roots(self) -> bool:
+        self.use_randomised_roots = not self.use_randomised_roots
+        return self.use_randomised_roots
     
     def enable_all_generators(self):
         for key in self.enabled_generators:
